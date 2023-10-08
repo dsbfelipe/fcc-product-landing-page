@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500&family=Sofia+Sans+Condensed:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    --black: rgb(7, 7, 7);
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+body {
+    background-color: var(--black);
+    color: var(--black);
+}
+
+header {
+    width: 100%;
+    display: flex;
+}
+
+.header-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+#header-img {
+    max-width: 35%;
+}
+
+.links {
+    display: none;
+}
+
+.hero-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#hero-img {
+    display: block;
+    width: 120%;
+}
+
+.white {
+    color: rgb(255, 255, 255);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+section :nth-child(1) { order: 2; }
+section :nth-child(2) { order: 1; }
+section :nth-child(3) { order: 3; }
+
+.titles {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+}
+
+.challenge-title {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+    border: 1px solid white;
+    padding: 15px;
+}
+
+.introduction-title {
+    margin-top: 10%;
+    border-left: 50px solid white;
+    border-right: 50px solid white;
+}
+
+.slide-bar {
+    white-space: nowrap;
+}
+
+.bar {
+    border: none;
+    display: inline-block;
+    width: 200%;
+    height: 45px;
+    background: repeating-linear-gradient(-45deg, var(--black) 0%, var(--black) 3%, white 4%, white 6%);
+    margin-top: 3%;
+    animation: 4s slide infinite linear;
+} 
+
+.bar:nth-child(2) {
+    margin-left: -7px;
+}
+
+.shout-survive {
+    box-shadow: -5px 10px 10px rgb(34, 34, 34);
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    padding: 0px 5px;
+    font-weight: bold;
+    right: 5%;
+    top: 65%;
+    transform: rotate(-10deg);
+}
+
+.white-shout {
+    background-color: white;
+    border: 5px solid var(--black);
+    outline: 1px solid white;
+}
+
+.white-section {
+    background-color: white;
+    margin-top: 50px;
+}
+
+
+.narrative-intro {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end ;
+    align-items: center;
+    min-height: 200%;
+    z-index: 1;
+}
+
+.flipped-1 {
+    transform: rotate(20deg);
+}
+.flipped-2 {
+    transform: rotate(-20deg);
+}
+
+.position-2 {
+    left: 60%;
+    top: 130%;
+    box-shadow: -5px 10px 10px black;
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    padding: 0px 5px;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid rgb(7, 7, 7);
+    outline: 1px solid white;
+    z-index: 2;
+}
+
+.position-1 {
+    left: 10%;
+    top: 140%;
+    box-shadow: -5px 10px 10px black;
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    padding: 0px 5px;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid var(--black);
+    outline: 1px solid white;
+    z-index: 2;
+}
+
+.section-background {
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 82px;
+    white-space: nowrap;
+    color: #dddddd;
+    line-height: 65px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.fade-1 {
+    color: #e6e6e6;
+}
+
+.fade-2 {
+    color: #eeeeee;
+}
+
+.fade-3 {
+    color: #f1f1f1;
+}
+
+.fade-4 {
+    color: #f7f7f7;
+}
+
+.fieldsets {
+    display: grid;
+    padding-bottom: 7.5%;
+}
+
+.challenges {
+    margin: 2.5% auto;
+    background-color: white;
+    max-width: 95%;
+    padding: 5%;
+    border: 3px solid var(--black);
+    outline: 1px solid white;
+    z-index: 5;
+    box-shadow: -5px 10px 10px black;
+}
+
+.challenge-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 2.5%;
+}
+
+.challenges:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite; 
+}
+
+.product-img-div {
+    margin-top: 10%;
+    position: absolute;
+    z-index: 5;
+}
+
