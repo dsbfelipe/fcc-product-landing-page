@@ -5,7 +5,7 @@
     max-width: 100%;
     margin: 0;
     overflow-x: hidden;
-    --black: rgb(7, 7, 7);
+    --black: rgb(14, 14, 14);
 }
 
 @keyframes slide {
@@ -74,9 +74,9 @@ section {
     flex-direction: column;
 }
 
-section :nth-child(1) { order: 2; }
-section :nth-child(2) { order: 1; }
-section :nth-child(3) { order: 3; }
+.hero :nth-child(1) { order: 2; }
+.hero :nth-child(2) { order: 1; }
+.hero :nth-child(3) { order: 3; }
 
 .titles {
     font-family: 'Sofia Sans Condensed', sans-serif;
@@ -89,7 +89,13 @@ section :nth-child(3) { order: 3; }
     font-family: 'Sofia Sans Condensed', sans-serif;
     font-weight: bold;
     font-size: 32px;
+}
 
+.perk-title {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
 }
 
 .bold {
@@ -258,8 +264,45 @@ section :nth-child(3) { order: 3; }
 }
 
 .product-img-div {
-    margin-top: 10%;
-    position: absolute;
+    margin-top: 15%;
     z-index: 5;
+    margin-bottom: 10%;
 }
 
+.perks {
+    margin: 2.5% auto;
+    background-color: var(--black);
+    max-width: 95%;
+    padding: 5%;
+    border: 3px solid white;
+    outline: 1px solid var(--black);
+    z-index: 5;
+    box-shadow: -5px 10px 10px black;
+    padding-bottom: 1.5em;
+}
+
+.perk-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    margin-top: 2.5%;
+}
+
+.flipped-3 {
+    transform: rotate(15deg);
+}
+
+.position-3 {
+    left: 60%;
+    top: 285%;
+    box-shadow: -5px 10px 10px black;
+    position: absolute;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 48px;
+    padding: 0px 5px;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid rgb(7, 7, 7);
+    outline: 1px solid white;
+    z-index: 6;
+}
